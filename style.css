@@ -1,0 +1,135 @@
+:root {
+  --pink: #f14e4e;
+  --bg: #1a1a1a;
+  --shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+  min-height: 100dvh;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/bg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  filter: brightness(50%);
+}
+
+.hero {
+  position: relative;
+  min-height: 100dvh;
+
+  /* background-color: var(--bg); */
+}
+.hero h1,
+.hero h4,
+.hero p {
+  text-shadow: var(--shadow);
+}
+.hero h1 {
+  font-family: "sacramento", cursive;
+  font-size: 6rem;
+}
+
+.hero p {
+  font-size: 1.4rem;
+}
+
+.hero a {
+  color: var(--pink);
+  background-color: white;
+  box-shadow: var(--shadow);
+}
+
+.hero a:hover {
+  color: white;
+  background-color: var(--pink);
+}
+
+.simply-countdown > .simply-section {
+  padding: 80px;
+}
+
+#btn-audio {
+  padding: 10px;
+  color: white;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  border-radius: 100px;
+  border: none;
+}
+
+.animasi{
+    animation: audioPlay 1s infinite linear;
+}
+@keyframes audioPlay{
+   from{
+    transform: rotate(0deg);
+   }
+   to{
+    transform: rotate(360deg);
+   }
+}
+#habede {
+  padding: 50px;
+  background-color: #1a1a1a;
+  color: white;
+  position: absolute;
+  z-index: 1;
+}
+
+.hidden-habede {
+  visibility: hidden;
+}
+#habede img {
+  width: auto;
+  height: 60%;
+}
+
+#habede h6 {
+  font-size: 5rem;
+}
+#habede p {
+  font-size: 1.3rem;
+}
+
+/* media query */
+/* laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 70px;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 55px;
+    margin: 5px;
+  }
+}
+/* mobile phone */
+@media (max-width: 576px) {
+  html {
+    font-size: 40%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 40px;
+    margin: 3px;
+  }
+}
